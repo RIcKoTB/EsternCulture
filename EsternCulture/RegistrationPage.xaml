@@ -1,0 +1,229 @@
+﻿<Window x:Class="EsternCulture.RegistrationPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EsternCulture" 
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        mc:Ignorable="d"
+        Icon="Photo/MainPhoto.jpg"
+        Title="Eastern Culture" Height="540" Width="1000" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" Foreground="{x:Null}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border 
+                Background="#FF39B19B"
+                CornerRadius="25 0 0 25">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="34*"/>
+                    <RowDefinition Height="132*"/>
+                    <RowDefinition Height="71*"/>
+                    <RowDefinition Height="51*"/>
+                    <RowDefinition Height="53*"/>
+                    <RowDefinition Height="136*"/>
+                    <RowDefinition Height="63*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock FontSize="15" 
+                           TextAlignment="Center" 
+                           Foreground="#c2cfff" 
+                           Height="21" Width="246" 
+                           FontFamily="Cascadia Code Light"
+                           Text="Eastern culture" Margin="27,6,27,7"/>
+
+                <TextBlock FontSize="32" 
+                           TextAlignment="Center" 
+                           Foreground="White" 
+                           Grid.Row="2"
+                           FontFamily="Cascadia Code SemiBold"
+                           Text="Welcome Back!" Margin="0,17,0,20"/>
+
+                <TextBlock Text="If you already have an account,"
+                           Grid.Row="2" 
+                           Foreground="White" 
+                           HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" 
+                           FontFamily="Cascadia Code SemiBold" 
+                           Margin="28,68,0,0" FontSize="14" Grid.RowSpan="2"/>
+                <TextBlock Text="you can sign in" 
+                           Grid.Row="3" 
+                           Foreground="White" 
+                           HorizontalAlignment="Left" 
+                           VerticalAlignment="Center" 
+                           FontFamily="Cascadia Code SemiBold" 
+                           Margin="98,0,0,0" FontSize="14"/>
+
+                <Button x:Name="btnAuthoritionPage" Grid.Row="4" Content="SIGN IN"
+                        Style="{StaticResource ButtonLoginPage}"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top" 
+                        Margin="0,2,0,0"
+                        Width="208"
+                        Height="41" Click="btnAuthoritionPage_Click"/>
+                <Button x:Name="btnPreivew" Grid.Row="6" Content="PREVIEW"
+                    Style="{StaticResource ButtonPriveiw}"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top" 
+                    Margin="10,25,0,0"
+                    Width="148"
+                    Height="28" Click="btnPreivew_Click" Cursor="Hand"/>
+
+            </Grid>
+        </Border>
+
+        <Border 
+                Grid.Column="1"
+                Background="White"
+                CornerRadius="0 25 25 0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="77*"/>
+                    <RowDefinition Height="57*"/>
+                    <RowDefinition Height="122*"/>
+                    <RowDefinition Height="122*"/>
+                    <RowDefinition Height="85*"/>
+                    <RowDefinition Height="77*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Create Account" 
+                           Grid.Row="1" 
+                           TextAlignment="Center" 
+                           Foreground="#FF39B19B" 
+                           FontSize="32" 
+                           FontFamily="Cascadia Code SemiBold" 
+                           HorizontalAlignment="Left" 
+                           VerticalAlignment="Center"
+                           Grid.ColumnSpan="2" 
+                           Margin="219,0,0,0" Height="37" Width="263"/>
+
+                <Border Grid.Row="2" Style="{StaticResource BorderForTextBox}" Margin="32,29,32,29">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="31*"/>
+                            <ColumnDefinition Width="231*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <fa:IconImage 
+                                Icon="User" 
+                                Style="{StaticResource menuButtonIcon}" 
+                                VerticalAlignment="Center"
+                                Margin="6,0,2,0" 
+                                Height="18"/>
+
+                        <TextBox x:Name="txtbFirstName" Grid.Column="1" materialDesign:HintAssist.Hint="First name" 
+                                 BorderBrush="{x:Null}"
+                                 VerticalAlignment="Center" 
+                                 Margin="10,0,10,0" 
+                                 Height="29"
+                                 Foreground="Black"
+                                 FontSize="14" CaretBrush="Black" SelectionBrush="Black"/>
+                        
+
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="2" Grid.Column="1" Style="{StaticResource BorderForTextBox}" Margin="32,29,32,29">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="31*"/>
+                            <ColumnDefinition Width="231*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <fa:IconImage 
+                                Icon="User" 
+                                Style="{StaticResource menuButtonIcon}" 
+                                VerticalAlignment="Center"
+                                Margin="6,0,2,0" 
+                                Height="18"/>
+
+                        <TextBox x:Name="txtbLastName" Grid.Column="1" 
+                                 materialDesign:HintAssist.Hint="Last name" 
+                                 Foreground="Black"
+                                 BorderBrush="{x:Null}"
+                                 FontSize="14"
+                                 VerticalAlignment="Center" 
+                                 Margin="10,0,10,0"
+                                 Height="29" SelectionBrush="Black" CaretBrush="Black" />
+
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="3" Style="{StaticResource BorderForTextBox}" Margin="32,29,32,29">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="31*"/>
+                            <ColumnDefinition Width="231*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <fa:IconImage 
+                                Icon="UserSecret" 
+                                Style="{StaticResource menuButtonIcon}" 
+                                VerticalAlignment="Center"
+                                Margin="6,0,2,0" 
+                                Height="18"/>
+
+                        <TextBox x:Name="txtbLogin" Grid.Column="1" 
+                                 materialDesign:HintAssist.Hint="Login" 
+                                 Foreground="Black"
+                                 FontSize="14"
+                                 BorderBrush="{x:Null}"
+                                 VerticalAlignment="Center" 
+                                 Margin="10,0,10,0" 
+                                 Height="29" CaretBrush="Black" SelectionBrush="Black" />
+
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="3" Grid.Column="1" Style="{StaticResource BorderForTextBox}" Margin="32,29,32,29">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="31*"/>
+                            <ColumnDefinition Width="231*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <fa:IconImage 
+                                Icon="Lock" 
+                                Style="{StaticResource menuButtonIcon}" 
+                                VerticalAlignment="Center"
+                                Margin="6,0,2,0" 
+                                Height="18"/>
+
+                        <PasswordBox x:Name="pswbPassword" Grid.Column="1" 
+                                     materialDesign:HintAssist.Hint="Password" 
+                                     Foreground="Black"
+                                     FontSize="14" 
+                                     BorderBrush="{x:Null}"
+                                     VerticalAlignment="Center" 
+                                     Margin="10,0,10,0" 
+                                     Height="29" SelectionBrush="Black" CaretBrush="Black" />
+
+                    </Grid>
+                </Border>
+
+
+                <Button x:Name="btnSignUp" Grid.Row="4" 
+                        Content="SIGN UP"
+                        Style="{StaticResource ButtonLoginPage2}"
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" 
+                        Width="210" Height="48" 
+                        Grid.ColumnSpan="2" Click="btnSignUp_Click" Cursor="Hand"/>
+
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>
